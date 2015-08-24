@@ -11,7 +11,7 @@ case class ProductionCompany(id: Long, name: String)
 case class TmdbCountry(iso_3166_1: String, name: String)
 case class TmdbLanguage(iso_639_1: String, name: String)
 case class TmdbMovie(adult: Boolean, backdrop_path: String, budget: Option[Long], genres: List[TmdbGenre],
-                     homepage: String, id: Long, imdb_id: String, orginal_language: String, original_title: String,
+                     homepage: String, id: Long, imdb_id: String, original_language: String, original_title: String,
                      overview: String, poster_path: String, production_companies: List[ProductionCompany],
                      production_countries: List[TmdbCountry],
                      release_date: String, revenue: Long, runtime: Long, spoken_languages: List[TmdbLanguage],

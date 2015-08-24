@@ -8,6 +8,7 @@ object Dependencies {
   val specs2Version = "3.6.4"
   val typesafeLogging = "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0"
   val betaMax = "co.freeside" % "betamax" % "1.1.2"
+  val bMaxTestSupport = "co.freeside" % "betamax-test-support" % "1.1.2"
   val groovy = "org.codehaus.groovy" % "groovy-all" % "2.4.4"
   def dispatchDep(artifactName: String) = {
     "net.databinder.dispatch" %% s"dispatch-${artifactName}" % dispatchVersion
@@ -28,6 +29,6 @@ object Dependencies {
   val dispatchDependencies = Seq(dispatchDep("core"), dispatchDep("lift-json"))
   val loggingDependencies = Seq(slf4jDep("api"), log4j2Dep("api"), log4j2Dep("core"), log4j2Dep("slf4j-impl"))
   val typesafeDeps = Seq("com.github.kxbmap" %% "configs" % "0.2.4")
-  val testDependencies = Seq(specs2Dep("core") % "test", specs2Dep("matcher-extra") % "test", betaMax % "test", groovy % "test")
+  val testDependencies = Seq(specs2Dep("core") % "test", specs2Dep("matcher-extra") % "test", betaMax % "test", bMaxTestSupport % "test", groovy % "test")
   val apiDependencies = dispatchDependencies ++ loggingDependencies ++ testDependencies ++ typesafeDeps
 }
